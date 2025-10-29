@@ -1,0 +1,48 @@
+body{
+    background-color: rgb(254, 254, 254);
+}
+
+#first-page{
+   background-image: url(wallpaper.jpg);
+   color:transparent;
+ 
+   height: 110vh;
+}
+
+.animated-slogan {
+  font-size: 3em;
+  color: #4e48e2;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  background-color: transparent;
+
+}
+
+
+#first-page h1{
+     margin-left: 250px;
+     
+}
+#cover img {
+  width: 200px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+
+footer{
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+
+
+}
+.fa-facebook {
+  font-size: 30px;
+  color: #1877F2; /* Facebook blue */
+  margin: 10px;
+  transition: 0.3s;
+}
+
+.fa-facebook:hover {
+  color: #0d47a1;
+}
