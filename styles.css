@@ -46,28 +46,86 @@ footer{
 .fa-facebook:hover {
   color: #0d47a1;
 }
-
-
-/* Hamburger icon (hidden on desktop) */
-.icon {
-  display: none;
-  float: right;
-  padding: 14px 20px;
-  cursor: pointer;
+/* Navbar */
+.navbar {
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    align-items: center;
 }
 
-/* Responsive styles */
-@media screen and (max-width: 600px) {
-  .navbar a { 
-    float: none;
-    display: none; /* hide links */
-    text-align: left;
-  }
-  .navbar.responsive {position: relative;}
-  .navbar.responsive a {
-    display: block; /* show links when menu opens */
-  }
-  .icon {
-    display: block;
+.navbar a {
     color: white;
-  }}
+    padding: 14px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.navbar a:hover {
+    background-color: red;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background-color: black;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: red;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Mobile */
+.navbar .icon {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar a:not(:first-child), 
+    .dropdown .dropbtn {
+        display: none;
+    }
+
+    .navbar.responsive a,
+    .navbar.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+    }
+
+    .navbar .icon {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+}
