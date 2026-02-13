@@ -13,7 +13,7 @@ body{
   font-size: 3em;
   color: #4e48e2;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-  background-color: transparent;
+
 
 }
 
@@ -46,3 +46,28 @@ footer{
 .fa-facebook:hover {
   color: #0d47a1;
 }
+
+
+/* Hamburger icon (hidden on desktop) */
+.icon {
+  display: none;
+  float: right;
+  padding: 14px 20px;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+  .navbar a { 
+    float: none;
+    display: none; /* hide links */
+    text-align: left;
+  }
+  .navbar.responsive {position: relative;}
+  .navbar.responsive a {
+    display: block; /* show links when menu opens */
+  }
+  .icon {
+    display: block;
+    color: white;
+  }}
